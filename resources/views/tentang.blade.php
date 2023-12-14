@@ -1,6 +1,6 @@
 @include('layout.main')
 
-<div class="main">
+<div class="main m-auto">
     <h1>Kontak</h1>
     <p>Email : </p>
     <p>Telepon : </p>

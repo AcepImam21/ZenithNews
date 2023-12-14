@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,7 @@ Route::get('/tentang', function () {
         "title" => 'Tentang',
     ]);
 });
+
+Route::get('/login', [LoginController::class, 'showLoginForm']);
+
+Route::get('/register', [RegisterController::class, 'showRegisterForm']);

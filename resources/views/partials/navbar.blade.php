@@ -11,14 +11,14 @@
                 class="bg-gray-200 px-8 py-2 rounded-md focus:outline-gray-200">
             <button class="bg-blue-500 items-center text-white px-4 py-2 rounded-md"><ion-icon class=""
                     name="search"></ion-icon></button>
-            <button class=" bg-gray-700 text-white px-4 py-2 rounded-md justify-between">Masuk</button>
+            <a href="/login" class=" bg-gray-700 text-white px-4 py-2 rounded-md justify-between">Masuk</a>
         </div>
     </div>
 </nav>
 
 <!-- Bottom Navbar -->
 <nav class="bg-gray-800 p-4">
-    <div class="container mx-auto flex justify-center items-center">
+    <div class="container m-auto  flex justify-center items-center">
         <!-- Menu -->
         <div class="hidden md:flex space-x-8">
             <a href="#" class="text-white text-lg">Beranda</a>
