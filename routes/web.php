@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +16,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {       // artinya adalah metode request get (mengambil dari url lewat browser yang menjalankan /... contoh /about (mengakses halaman about))
-    return view('welcome');         // disini me return/menampilkan sebuah view yang namanya welcome yang ada di folder views, karena secara default '/' mengarah ke file welcome.blade.php 
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/home', function () {       
-    return view('home');          
+Route::get('/home', function () {
+    return view('home');
 });
 
-Route::get('/about', function () {       
-    return view('about');          
+Route::get('/about', function () {
+    return view('about');
 });
+
+// Route::get('/login', 'LoginController@showLoginForm');
+
+
+// Route::get('/login', function () {
+//     return view('login.index');
+// });
+
+Route::get('/login', [LoginController::class, 'showLoginForm']);
+
+
+
+
+
