@@ -27,6 +27,12 @@ Route::get('/tentang', function () {
     ]);
 });
 
+Route::get('/login', function () {
+    return view('login', [
+        "title" => 'login',
+    ]);
+});
+
 Route::get('/login', [LoginController::class, 'showLoginForm']);
 
 Route::get('/register', [RegisterController::class, 'showRegisterForm']);
