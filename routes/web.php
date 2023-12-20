@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +21,9 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/tentang', function () {
-    return view('tentang', [
-        "title" => 'Tentang',
+Route::get('/kontak', function () {
+    return view('kontak', [
+        "title" => 'Kontak',
     ]);
 });
 

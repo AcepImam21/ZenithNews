@@ -21,14 +21,14 @@
     <div class="container m-auto  flex justify-center items-center">
         <!-- Menu -->
         <div class="hidden md:flex space-x-8">
-            <a href="#" class="text-white text-lg">Beranda</a>
-            <a href="#" class="text-white text-lg">Tentang</a>
-            <a href="#" class="text-white text-lg">Teknologi</a>
-            <a href="#" class="text-white text-lg">Olahraga</a>
-            <a href="#" class="text-white text-lg">Kuliner</a>
-            <a href="#" class="text-white text-lg">Kesehatan</a>
-            <a href="#" class="text-white text-lg">Otomotif</a>
-            <a href="#" class="text-white text-lg">Kontak</a>
+            <a href="/" class="text-white text-lg">Beranda</a>
+            <a href="/tentang" class="text-white text-lg">Tentang</a>
+            <a href="/teknologi" class="text-white text-lg">Teknologi</a>
+            <a href="/olahraga" class="text-white text-lg">Olahraga</a>
+            <a href="/kuliner" class="text-white text-lg">Kuliner</a>
+            <a href="/kesehatan" class="text-white text-lg">Kesehatan</a>
+            <a href="/otomotif" class="text-white text-lg">Otomotif</a>
+            <a href="/kontak" class="text-white text-lg">Kontak</a>
         </div>
     </div>
 </nav>
