@@ -16,34 +16,34 @@
         <h1 class="text-2xl font-bold mb-4">Berita Terbaru </h1>
 
         <!-- Card Container -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- Card 1 -->
-            <div class="bg-white p-4 rounded-lg shadow-md">
-                <img src="https://via.placeholder.com/300" alt="Gambar Berita" class="w-full h-40 object-cover mb-4">
-                <h2 class="text-lg font-bold mb-2">Judul Berita 1</h2>
-                <p class="text-gray-600">Deskripsi singkat berita. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <a href="#" class="text-blue-500 mt-2 inline-block">Baca Selengkapnya</a>
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Card 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/300" alt="Gambar Berita" class="w-full h-40 object-cover mb-4">
+                    <h2 class="text-lg font-bold mb-2"></h2>
+                    <p class="text-gray-600">Deskripsi singkat berita. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <a href="#" class="text-blue-500 mt-2 inline-block">Baca Selengkapnya</a>
+                </div>
 
-            <!-- Card 2 -->
-            <div class="bg-white p-4 rounded-lg shadow-md">
-                <img src="https://via.placeholder.com/300" alt="Gambar Berita" class="w-full h-40 object-cover mb-4">
-                <h2 class="text-lg font-bold mb-2">Judul Berita 2</h2>
-                <p class="text-gray-600">Deskripsi singkat berita. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <a href="#" class="text-blue-500 mt-2 inline-block">Baca Selengkapnya</a>
-            </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/300" alt="Gambar Berita" class="w-full h-40 object-cover mb-4">
+                    <h2 class="text-lg font-bold mb-2">Judul Berita 2</h2>
+                    <p class="text-gray-600">Deskripsi singkat berita. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <a href="#" class="text-blue-500 mt-2 inline-block">Baca Selengkapnya</a>
+                </div>
 
-            <!-- Card 3 -->
-            <div class="bg-white p-4 rounded-lg shadow-md">
-                <img src="https://via.placeholder.com/300" alt="Gambar Berita" class="w-full h-40 object-cover mb-4">
-                <h2 class="text-lg font-bold mb-2">Judul Berita 3</h2>
-                <p class="text-gray-600">Deskripsi singkat berita. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <a href="#" class="text-blue-500 mt-2 inline-block">Baca Selengkapnya</a>
+                <!-- Card 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/300" alt="Gambar Berita" class="w-full h-40 object-cover mb-4">
+                    <h2 class="text-lg font-bold mb-2">Judul Berita 3</h2>
+                    <p class="text-gray-600">Deskripsi singkat berita. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <a href="#" class="text-blue-500 mt-2 inline-block">Baca Selengkapnya</a>
+                </div>
             </div>
-        </div>
     </div>
 
     @include('partials.footer')
