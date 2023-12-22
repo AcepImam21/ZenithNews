@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 
-class PostController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('posts', [
+        return view('home', [
             "title" => "Posts",
             "posts" => Post::all()
         ]);
@@ -38,9 +39,9 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show(post $post)
     {
-        return view('post', [
+        return view('home', [
             "title" => "Single Post",
             "post" => $post
         ]);

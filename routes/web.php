@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,12 @@ Route::get('/kontak', function () {
         "title" => 'Kontak',
     ]);
 });
+
+Route::get('/home', [HomeController::class, 'index']);
+
+Route::get('posts/{post:slug}', [HomeController::class, 'show']);
+
+
 
 Route::get('/login', [LoginController::class, 'showLoginForm']);
 
