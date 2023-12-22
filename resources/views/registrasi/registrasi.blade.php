@@ -14,27 +14,59 @@
                             <h2 class="mb-8 text-2xl text-cyan-900 font-bold">Selamat Datang!<br>Silahkan registrasi dahulu
                             </h2>
                         </div>
-                        <div class="mt-10 grid space-y-4">
-                            <input
-                                class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
-                                placeholder="Nama Lengkap">
-                            <input
-                                class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
-                                placeholder="Username">
-                            <input
-                                class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
-                                placeholder="Email">
-                            <input
-                                class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
-                                placeholder="Password">
-                            <button class="w-100 h-12 mx-16 bg-gray-900 hover:bg-gray-700 text-white font-bold rounded"
-                                type="submit">Daftar</button>
-                            <small class="text-center">Sudah mendaftar? <a href="/login" class="text-blue-300">Login
-                                </a></small>
-                        </div>
+
+                        <form action="/register" method="post">
+                            @csrf
+                            <div class="mt-10 grid space-y-4">
+                                <input
+                                    class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
+                                    placeholder="Nama Lengkap" type="text" name="name" id="name" required
+                                    value="{{ old('name') }}">
+                                @error('name')
+                                    <div class="text-red-500">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
+                                <input
+                                    class="group
+                                    h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300
+                                    hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
+                                    placeholder="Username" type="text" name="username" id="username" required
+                                    value="{{ old('username') }}">
+                                @error('username')
+                                    <div class="text-red-500">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
+                                <input
+                                    class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
+                                    placeholder="Email" type="email" id="email" name="email" required
+                                    value="{{ old('email') }}">
+                                @error('email')
+                                    <div class="text-red-500">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
+                                <input
+                                    class=" @error('password') is-invalid @enderror group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
+                                    placeholder="Password" type="password" name="password" id="password" required>
+                                @error('password')
+                                    <div class="text-red-500">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                                <button class="w-100 h-12 mx-16 bg-gray-900 hover:bg-gray-700 text-white font-bold rounded"
+                                    type="submit">Daftar</button>
+                        </form>
+                        <small class="text-center">Sudah mendaftar? <a href="/login" class="text-blue-300">Login
+                            </a></small>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection

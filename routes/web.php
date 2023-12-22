@@ -19,21 +19,19 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('home', [
         "title" => 'Home',
+        "active" => "Home",
     ]);
 });
 
 Route::get('/kontak', function () {
     return view('kontak', [
         "title" => 'Kontak',
+        "active" => 'kontak',
     ]);
 });
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
 
-Route::get('posts/{post:slug}', [HomeController::class, 'show']);
-
-
-
-Route::get('/login', [LoginController::class, 'showLoginForm']);
-
-Route::get('/register', [RegisterController::class, 'showRegisterForm']);
+Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('registrasi')->middleware('guest');
+Route::post('/register', [LoginController::class, 'authenticate']);
