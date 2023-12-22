@@ -18,15 +18,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home', [
         "title" => 'Home',
+        "active" => "Home",
     ]);
 });
 
 Route::get('/kontak', function () {
     return view('kontak', [
         "title" => 'Kontak',
+        "active" => 'kontak',
     ]);
 });
 
-Route::get('/login', [LoginController::class, 'showLoginForm']);
+Route::get('/dashboard', function () {
+    return view('dashboard.dashboard');
+});
 
-Route::get('/register', [RegisterController::class, 'showRegisterForm']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('registrasi')->middleware('guest');
+Route::post('/register', [LoginController::class, 'authenticate']);
