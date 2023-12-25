@@ -16,12 +16,12 @@ use App\Http\Controllers\HomeController;
 |
  */
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => 'Home',
-        "active" => "Home",
-    ]);
-});
+// Route::get('/', function () {
+//     return view('home', [
+//         "title" => 'Home',
+//         "active" => "Home",
+//     ]);
+// });
 
 Route::get('/kontak', function () {
     return view('kontak', [
@@ -29,6 +29,14 @@ Route::get('/kontak', function () {
         "active" => 'kontak',
     ]);
 });
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard.dashboard');
+});
+
+Route::get('/', [HomeController::class, 'index']);
+// Route::get('posts/{post:slug}', [HomeController::class, 'show']);
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);

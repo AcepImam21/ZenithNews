@@ -2,7 +2,7 @@
     <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
         <div class="text-gray-800">
-            <img src="image/Group 2.png" width="180" alt="">
+            <a href="/"><img src="image/Group 2.png" width="180" alt=""></a>
         </div>
 
         <!-- Search and Login -->
@@ -22,7 +22,6 @@
         <!-- Menu -->
         <div class="hidden md:flex space-x-8">
             <a href="/" class=" text-gray-300 text-lg ">Beranda</a>
-            <a href="/tentang" class="text-gray-300 text-lg">Tentang</a>
             <a href="/teknologi" class="text-gray-300 text-lg">Teknologi</a>
             <a href="/olahraga" class="text-gray-300 text-lg">Olahraga</a>
             <a href="/kuliner" class="text-gray-300 text-lg">Kuliner</a>
