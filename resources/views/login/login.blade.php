@@ -16,6 +16,7 @@
                         </div>
 
                         <form action="/login" method="post">
+                            @csrf
                             <div class="mt-10 grid space-y-4">
                                 <input
                                     class=" @error('email') is-invalid
