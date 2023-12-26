@@ -54,7 +54,7 @@
                                     class=" @error('password') is-invalid @enderror group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                                     placeholder="Password" type="password" name="password" id="password" required>
                                 @error('password')
-                                    <div class="bg-red-500">
+                                    <div class="bg-red-500 text-white rounded-md">
                                         {{ $message }}
                                     </div>
                                 @enderror
