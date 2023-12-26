@@ -24,7 +24,7 @@
                     <h2 class="text-lg font-bold mb-2">{{ $post->title }}</h2>
                     <p class="text-gray-600">{{ $post->excerpt }}
                     </p>
-                    <a href="#" class="text-blue-500 mt-2 inline-block">Baca Selengkapnya</a>
+                    <a href="/post/{{ $post->slug }}" class="text-blue-500 mt-2 inline-block">Baca Selengkapnya</a>
                 </div>
             @endforeach
         </div>

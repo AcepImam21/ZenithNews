@@ -34,8 +34,10 @@ Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 });
 
+
+
 Route::get('/', [HomeController::class, 'index']);
-// Route::get('posts/{post:slug}', [HomeController::class, 'show']);
+Route::get('post/{post:slug}', [HomeController::class, 'show']);
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
