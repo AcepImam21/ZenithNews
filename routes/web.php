@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => 'Home',
-        "active" => "Home",
-    ]);
-});
+// Route::get('/', function () {
+//     return view('home', [
+//         "title" => 'Home',
+//         "active" => "Home",
+//     ]);
+// });
 
 Route::get('/kontak', function () {
     return view('kontak', [
@@ -29,9 +30,13 @@ Route::get('/kontak', function () {
     ]);
 });
 
+
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 });
+
+Route::get('/', [HomeController::class, 'index']);
+// Route::get('posts/{post:slug}', [HomeController::class, 'show']);
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);

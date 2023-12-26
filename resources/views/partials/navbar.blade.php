@@ -22,7 +22,6 @@
         <!-- Menu -->
         <div class="hidden md:flex space-x-8">
             <a href="/" class=" text-gray-300 text-lg ">Beranda</a>
-
             <a href="/teknologi" class="text-gray-300 text-lg">Teknologi</a>
             <a href="/olahraga" class="text-gray-300 text-lg">Olahraga</a>
             <a href="/kuliner" class="text-gray-300 text-lg">Kuliner</a>
