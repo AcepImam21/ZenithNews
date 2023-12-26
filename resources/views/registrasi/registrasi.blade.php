@@ -23,7 +23,7 @@
                                     placeholder="Nama Lengkap" type="text" name="name" id="name" required
                                     value="{{ old('name') }}">
                                 @error('name')
-                                    <div class="bg-red-500">
+                                    <div class="bg-red-500  text-white rounded-md">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -35,7 +35,7 @@
                                     placeholder="Username" type="text" name="username" id="username" required
                                     value="{{ old('username') }}">
                                 @error('username')
-                                    <div class="bg-red-500">
+                                    <div class="bg-red-500  text-white rounded-md">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -45,7 +45,7 @@
                                     placeholder="Email" type="email" id="email" name="email" required
                                     value="{{ old('email') }}">
                                 @error('email')
-                                    <div class="bg-red-500">
+                                    <div class="bg-red-500  text-white rounded-md">
                                         {{ $message }}
                                     </div>
                                 @enderror
