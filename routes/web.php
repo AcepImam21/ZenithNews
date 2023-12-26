@@ -3,7 +3,10 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
+
+use App\models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +41,14 @@ Route::get('/dashboard', function () {
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('post/{post:slug}', [HomeController::class, 'show']);
+
+Route::get('/categories/{category:slug}', function(category $category) {
+    return view('category', [
+        'title' => $category->name,
+        'posts' => $category->posts,
+        'category' => $category->name
+    ]);
+});
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
