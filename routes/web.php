@@ -23,6 +23,41 @@ use Illuminate\Support\Facades\Route;
 //     ]);
 // });
 
+Route::get('/teknologi', function () {
+    return view('teknologi', [
+        "title" => 'teknologi',
+        "active" => 'teknologi',
+    ]);
+});
+
+Route::get('/olahraga', function () {
+    return view('olahraga', [
+        "title" => 'olahraga',
+        "active" => 'olahraga',
+    ]);
+});
+
+Route::get('/kuliner', function () {
+    return view('kuliner', [
+        "title" => 'kuliner',
+        "active" => 'kuliner',
+    ]);
+});
+
+Route::get('/kesehatan', function () {
+    return view('kesehatan', [
+        "title" => 'kesehatan',
+        "active" => 'kesehatan',
+    ]);
+});
+
+Route::get('/otomotif', function () {
+    return view('otomotif', [
+        "title" => 'otomotif',
+        "active" => 'otomotif',
+    ]);
+});
+
 Route::get('/kontak', function () {
     return view('kontak', [
         "title" => 'Kontak',
