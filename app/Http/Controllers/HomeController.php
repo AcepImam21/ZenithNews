@@ -39,13 +39,15 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show(Post $post) 
     {
-        return view('home', [
+        return view('post', [
             "title" => "Single Post",
-            "Post" => $post
+            "post" => $post
         ]);
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
