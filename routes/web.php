@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -30,15 +31,19 @@ Route::get('/kontak', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.dashboard');
-});
+// Route::get('/dashboard', function () {
+//     return view('dashboard.dashboard');
+// });
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('guest');
 // Route::get('posts/{post:slug}', [HomeController::class, 'show']);
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('registrasi')->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
