@@ -4,7 +4,7 @@
     <article style="margin-left: 25vw; margin-right: 25vw;">
         <h2 style="font-size: 28px; margin-top: 20px; font-weight: bold;">{{ $post->title }}</h2>
 
-        <p style="margin-top: 2px;">By. Imam in 
+        <p style="margin-top: 2px;">Oleh <a href="/authors/{{ $post->author->username }}" style="text-decoration: underline;">{{ $post->author->name }}</a> Dalam 
             <a href="/categories/{{ $post->category->slug }}" 
             style="color: blue; text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 3px;"
             onmouseover="this.style.borderBottom='2px solid blue'; this.style.paddingBottom='0px';"
