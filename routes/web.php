@@ -38,7 +38,7 @@ Route::get('/kontak', function () {
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('guest');
+Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 // Route::get('posts/{post:slug}', [HomeController::class, 'show']);
 
 Route::get('post/{post:slug}', [HomeController::class, 'show']);
