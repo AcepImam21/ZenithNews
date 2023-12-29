@@ -17,7 +17,7 @@ class PostController extends Controller
 
     public function show($id)
     {
-        $post = Post::with('author:id,username')->findOrFail($id);
+        $post = Post::with(['author:id,username'])->findOrFail($id);
         return new PostResource($post);
     }
 

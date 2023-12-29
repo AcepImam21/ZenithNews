@@ -13,8 +13,8 @@
                         </path>
                     </svg>
                 </button>
-                <a href="https://flowbite.com" class="flex ms-2 md:me-24">
-                    <img src="image/Group 2.png" class="h-8 me-3" alt="FlowBite Logo" />
+                <a href="/" class="flex ms-2 md:me-24">
+                    <img src="image/Group 2.png" class="h-8 me-3" alt="" />
                     <span
                         class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"></span>
                 </a>
@@ -27,8 +27,8 @@
                         <span class="sr-only">Open user menu</span>
                         Hi, {{ auth()->user()->name }}
 
-                        <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 10 6">
+                        <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m1 1 4 4 4-4" />
                         </svg>

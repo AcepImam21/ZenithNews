@@ -69,13 +69,9 @@ Route::get('/kontak', function () {
     ]);
 });
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard.dashboard');
-// });
-
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+// Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 // Route::get('posts/{post:slug}', [HomeController::class, 'show']);
 
 Route::get('post/{post:slug}', [HomeController::class, 'show']);
@@ -92,9 +88,17 @@ Route::get('/categories/{category:slug}', function (category $category) {
 Route::get('/authors/{author:username}', [AuthorController::class, 'show']);
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login.post');
 
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('registrasi')->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store']);
+Route::post('/register', [RegisterController::class, 'store'])->name('registrasi.post');
+
+Route::get('/dashboard', function () {
+    return view('dashboard.dashboard');
+})->middleware('auth')->name('dashboard');
+
+Route::get('/dashboard/posts', [DashboardController::class, 'showPosts'])
+    ->name('dashboard.posts')
+    ->middleware('auth');
