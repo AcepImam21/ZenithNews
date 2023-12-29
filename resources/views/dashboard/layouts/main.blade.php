@@ -183,6 +183,9 @@
         }
     </style>
 
+    {{-- Flowbite --}}
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+
     {{-- FontAwesome --}}
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
     <link rel="stylesheet"
