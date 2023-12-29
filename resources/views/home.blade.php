@@ -21,28 +21,20 @@
             @foreach ($posts as $post)
                 <div class="bg-white p-4 rounded-lg shadow-md">
                     <img src="https://via.placeholder.com/300" alt="Gambar Berita" class="w-full h-40 object-cover mb-4">
-                    <h2 class="text-lg font-bold mb-2">{{ $post->title }}</h2>
+                    <h2 class="text-lg font-bold mb-1">{{ $post->title }}</h2>
+
+                    <p style="margin-top: 2px; margin-bottom: 10px">Oleh <a href="/authors/{{ $post->author->username }}" style="text-decoration: underline;">{{ $post->author->name }}</a> Dalam 
+                        <a href="/categories/{{ $post->category->slug }}" 
+                        style="color: blue; text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 3px;"
+                        onmouseover="this.style.borderBottom='2px solid blue'; this.style.paddingBottom='0px';"
+                        onmouseout="this.style.borderBottom='2px solid transparent'; this.style.paddingBottom='3px';"
+                        >
+                            {{ $post->category->name }}
+                        </a>
+                    </p>
                     <p class="text-gray-600">{{ $post->excerpt }}
                     </p>
                     <a href="/post/{{ $post->slug }}" class="text-blue-500 mt-2 inline-block">Baca Selengkapnya</a>
-                </div>
-            @endforeach
-        </div>
-    </div>
-
-    <div class="container mx-auto p-4 my-4">
-        <h1 class="text-2xl font-bold mb-4">Berita Olahraga</h1>
-
-        <!-- Card Container -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- Card 1 -->
-            @foreach ($posts as $post)
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <img src="https://via.placeholder.com/300" alt="Gambar Berita" class="w-full h-40 object-cover mb-4">
-                    <h2 class="text-lg font-bold mb-2">{{ $post->title }}</h2>
-                    <p class="text-gray-600">{{ $post->excerpt }}
-                    </p>
-                    <a href="#" class="text-blue-500 mt-2 inline-block">Baca Selengkapnya</a>
                 </div>
             @endforeach
         </div>

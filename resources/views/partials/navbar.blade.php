@@ -7,11 +7,11 @@
 
         <!-- Search and Login -->
         <div class="flex items-center space-x-4">
-            <input type="text" placeholder="Cari berita..."
+
+            <input type="text" name="search" placeholder="Cari berita..." value="{{ request('search') }}"
                 class="bg-gray-200 px-8 py-2 rounded-md focus:outline-gray-200">
             <button class="bg-blue-500 items-center text-white px-4 py-2 rounded-md"><ion-icon class=""
                     name="search"></ion-icon></button>
-
             @auth
                 <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"
                     class="flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full focus:outline-none hover:text-blue-600 "

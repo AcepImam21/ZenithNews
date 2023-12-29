@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -14,9 +13,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         return view('home', [
             "title" => "Posts",
-            "posts" => Post::all()
+            "posts" => Post::latest()->get()
         ]);
     }
 
@@ -39,15 +39,13 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post) 
+    public function show(Post $post)
     {
         return view('post', [
             "title" => "Single Post",
-            "post" => $post
+            "post" => $post,
         ]);
     }
-
-
 
     /**
      * Show the form for editing the specified resource.
