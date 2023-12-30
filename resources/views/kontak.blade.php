@@ -4,8 +4,8 @@
 <div class="my-8 mx-8">
     <div class="my-8 mx-4 shadow-2xl py-8 px-8">
         <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg text-dark">
-                <h1 class="text-4xl sm:text-5xl text-gray-800 dark:text-dark font-extrabold tracking-tight">
+            <div class="p-6 mr-2 bg-gray-100sm:rounded-lg text-dark">
+                <h1 class="text-4xl sm:text-5xl dark:text-dark font-extrabold tracking-tight">
                     Kontak Kami</h1>
                 <p class="text-normal text-lg sm:text-2xl font-medium text-dark dark:text-white mt-2">
                     Hubungi Kami</p>
@@ -28,7 +28,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
-                    </div>                    
+                    </div>
                     <div class="ml-4 text-md tracking-wide font-semibold w-40">+880 1234567890</div>
                 </div>
 
