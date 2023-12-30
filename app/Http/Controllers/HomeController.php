@@ -15,8 +15,9 @@ class HomeController extends Controller
     {
 
         return view('home', [
-            "title" => "Posts",
-            "posts" => Post::latest()->get()
+            "title" => "Postingan Terbaru",
+            // "posts" => Post::latest()->get()
+            "posts" => post::with(['author', 'category'])->latest()->get()
         ]);
     }
 
