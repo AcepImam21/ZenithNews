@@ -1,12 +1,11 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\models\Category;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,7 +37,7 @@ Route::get('/Kkategori', function () {
     return view('Kkategori', [
         "title" => 'Kategori',
         "active" => 'Kategori',
-        'categories' => Category::all()
+        'categories' => Category::all(),
     ]);
 });
 
@@ -48,7 +47,7 @@ Route::get('/Kkategori', function () {
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+// Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 // Route::get('posts/{post:slug}', [HomeController::class, 'show']);
 
 Route::get('post/{post:slug}', [HomeController::class, 'show']);
@@ -61,6 +60,9 @@ Route::get('/categories/{category:slug}', function (category $category) {
     ]);
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard.dashboard');
+})->middleware('auth');
 
 Route::get('/authors/{author:username}', [AuthorController::class, 'show']);
 
@@ -71,3 +73,5 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('registrasi')->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
