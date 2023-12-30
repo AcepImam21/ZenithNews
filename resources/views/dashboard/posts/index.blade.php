@@ -6,6 +6,12 @@
         <div class="mt-4 mx-4">
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
                 <div class="w-full overflow-x-auto">
+
+                    <a href="/dashboard/posts/create"
+                        class="bg-blue-700 inline-block mb-5 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition duration-300 transform hover:shadow-md">Tambah
+                        Postingan
+                    </a>
+
                     <table class="w-full">
                         <thead>
                             <tr

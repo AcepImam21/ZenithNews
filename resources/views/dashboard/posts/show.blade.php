@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.main')
 @section('container')
-    <div class="h-full ml-14 mt-14 md:ml-64">
+    <div class="h-full ml-14 mt-20 md:ml-64">
         <article style="margin-left: 25vw; margin-right: 25vw;">
             <h2 style="font-size: 28px; margin-top: 20px; font-weight: bold;">{{ $post->title }}</h2>
             <a href="/dashboard/posts"
