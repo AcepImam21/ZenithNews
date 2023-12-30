@@ -15,20 +15,19 @@
                     <table class="w-full">
                         <thead>
                             <tr
-                                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                                class="text-xs font-semibold tracking-wide text-left uppercase border-b border-gray-700  text-gray-400 bg-gray-800">
                                 <th class="px-4 py-3">Judul</th>
                                 <th class="px-4 py-3">Kategori</th>
                                 <th class="px-4 py-3">Aksi</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                        <tbody class=" divide-y divide-gray-700 bg-gray-800">
                             @foreach ($posts as $post)
-                                <tr
-                                    class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
+                                <tr class="bg-gray-800  hover:bg-gray-900  text-gray-400">
                                     <td class="px-4 py-3 text-sm">{{ $post->title }}</td>
                                     <td class="px-4 py-3 text-xs">
                                         <span
-                                            class="px-2 py-2 font-semibold leading-tight text-green-900 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">{{ $post->category->name }}
+                                            class="px-2 py-2 font-semibold leading-tight text-green-900 bg-green-200 rounded-full  ">{{ $post->category->name }}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-white">
