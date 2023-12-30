@@ -198,7 +198,6 @@
     <div>
         <div>
             @include('dashboard.layouts.sidebar')
-            @include('dashboard.posts.index')
         </div>
     </div>
 
