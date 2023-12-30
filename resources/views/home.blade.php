@@ -15,6 +15,57 @@
     <div class="container mx-auto p-4">
         <h1 class="text-2xl font-bold mb-4">{{ $title }}</h1>
 
+        {{-- <div class="row justify-content-center mb-3">
+            <div class="col-md-6">
+                <form action="/">
+                    @if (request('category'))
+                        <input type="hidden" name="category" value="{{ request('category') }}">
+                    @endif
+                    @if (request('author'))
+                        <input type="hidden" name="author" value="{{ request('author') }}">
+                    @endif
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
+                        <button class="btn btn-danger" type="submit">Search</button>
+                      </div>
+                </form>
+            </div>
+        </div> --}}
+
+        <div class="flex justify-center my-3">
+            <div class="w-6/12">
+                <form action="/">
+                    @if (request('category'))
+                        <input type="hidden" name="category" value="{{ request('category') }}">
+                    @endif
+                    @if (request('author'))
+                        <input type="hidden" name="author" value="{{ request('author') }}">
+                    @endif
+                    <div class="flex items-center border-b border-b-2 border-black py-2">
+                        <input
+                            type="text"
+                            class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                            placeholder="Search.."
+                            name="search"
+                            value="{{ request('search') }}"
+                        />
+                        <button
+                            class="flex-shrink-0 bg-gray-800 hover:bg-gray-600 active:translate-y-1 border-black hover:border-black text-sm border-4 text-white py-1 px-2 rounded transition-transform duration-150 ease-in-out"
+                            type="submit"
+                        >
+                            Search
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+
+
+        @if ($posts->count())
+
         <!-- Card Container -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Card 1 -->
@@ -42,7 +93,12 @@
                     </div>
                 @endforeach
             </div>
-    </div>
+
+        </div>
+        @else    
+            <p class="text-center fs-4">No Post Found</p>
+        @endif
+
 
     @include('partials.footer')
 @endsection

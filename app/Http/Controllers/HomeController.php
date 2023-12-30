@@ -13,11 +13,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         return view('home', [
             "title" => "Postingan Terbaru",
             // "posts" => Post::latest()->get()
-            "posts" => post::with(['author', 'category'])->latest()->get()
+            "posts" => post::with(['author', 'category'])->latest()->filter(request(['search', 'category', 'author']))->get()
         ]);
     }
 
