@@ -34,6 +34,14 @@ Route::get('/kontak', function () {
     ]);
 });
 
+Route::get('/Kkategori', function () {
+    return view('Kkategori', [
+        "title" => 'Kategori',
+        "active" => 'Kategori',
+        'categories' => Category::all()
+    ]);
+});
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard.dashboard');
 // });
@@ -42,43 +50,6 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 // Route::get('posts/{post:slug}', [HomeController::class, 'show']);
-
-// Route::get('/teknologi', function () {
-//     return view('teknologi', [
-//         'title' => 'Teknologi',
-//         'active' => 'teknologi',
-//     ]);
-// });
-
-// Route::get('/olahraga', function () {
-//     return view('olahraga', [
-//         'title' => 'Olahraga',
-//         'active' => 'olahraga',
-//     ]);
-// });
-
-// Route::get('/kuliner', function () {
-//     return view('kuliner', [
-//         'title' => 'Kuliner',
-//         'active' => 'kuliner',
-//     ]);
-// });
-
-// Route::get('/otomotif', function () {
-//     return view('otomotif', [
-//         'title' => 'Otomotif',
-//         'active' => 'otomotif',
-//     ]);
-// });
-
-// Route::get('/kesehatan', function () {
-//     return view('kesehatan', [
-//         'title' => 'Kesehatan',
-//         'active' => 'kesehatan',
-//     ]);
-// });
-
-// Route::get('/{category:slug}', 'CategoryController@show');
 
 Route::get('post/{post:slug}', [HomeController::class, 'show']);
 

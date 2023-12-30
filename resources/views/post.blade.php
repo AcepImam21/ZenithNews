@@ -14,10 +14,12 @@
             </a>
         </p>
 
+        <img src="https://source.unsplash.com/300x300/?{{ $post->category->name }}" alt="Gambar Berita" class="w-full h-40 object-cover mb-4" style="margin-top: 20px; margin-bottom: 20px;">
+
         <div style="margin-top: 20px; margin-bottom: 20px;">
             {!! $post->body !!}
         </div>
-        
+
         <a href="/" style="display: inline-block; margin-top: 10px; margin-bottom: 10%; padding: 8px 16px; background-color: #4a5568; color: white; border-radius: 4px; text-decoration: none; transition: background-color 0.3s;"
             onmouseover="this.style.backgroundColor='#2d3748';" onmouseout="this.style.backgroundColor='#4a5568';">
             Back To Post

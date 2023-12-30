@@ -56,11 +56,7 @@
         <!-- Menu -->
         <div class="hidden md:flex space-x-8">
             <a href="/" class=" text-gray-300 text-lg ">Beranda</a>
-            <a href="/teknologi" class="text-gray-300 text-lg">Teknologi</a>
-            <a href="/olahraga" class="text-gray-300 text-lg">Olahraga</a>
-            <a href="/kuliner" class="text-gray-300 text-lg">Kuliner</a>
-            <a href="/kesehatan" class="text-gray-300 text-lg">Kesehatan</a>
-            <a href="/otomotif" class="text-gray-300 text-lg">Otomotif</a>
+            <a href="/Kkategori" class="text-gray-300 text-lg">Kategori</a>
             <a href="/kontak" class="text-gray-300 text-lg">Kontak</a>
         </div>
     </div>
