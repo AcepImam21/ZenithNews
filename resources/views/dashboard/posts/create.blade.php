@@ -5,7 +5,7 @@
 
         <div class="max-w-4xl bg-white p-8 rounded">
 
-            <form method="post" action="/dashboard/posts">
+            <form method="post" action="/dashboard/posts" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-4">
                     <label for="title" class="block text-sm font-medium text-gray-600">Judul</label>
@@ -39,6 +39,17 @@
                         @endforeach
                     </select>
                 </div>
+
+                <div class="mb-4">
+                    <label for="image" class="block text-sm font-medium text-gray-600">Pilih File</label>
+                    <input type="file" id="image" name="image" class="mt-1 p-2 w-full border rounded @error('image') is-invalid border-red-500 @enderror">
+                    @error('file')
+                        <div class="text-red-500 mt-2 text-sm">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+                
 
                 <div class="mb-4">
                     <label for="body" class="block text-sm font-medium text-gray-600">Body</label>

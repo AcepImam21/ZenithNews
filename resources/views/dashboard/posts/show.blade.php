@@ -20,8 +20,14 @@
                     name="create-outline"></ion-icon>Edit
             </a>
 
-            <img src="https://source.unsplash.com/300x300/?{{ $post->category->name }}" alt="Gambar Berita"
+            @if($post->image)
+                <img src="{{ asset('storage/' . $post->image) }}" alt="Gambar Berita"
                 class="w-full h-40 object-cover mb-4" style=" margin-bottom: 20px;">
+
+            @else
+                <img src="https://source.unsplash.com/300x300/?{{ $post->category->name }}" alt="Gambar Berita"
+                class="w-full h-40 object-cover mb-4" style=" margin-bottom: 20px;">
+            @endif
 
             <div style="margin-top: 20px; margin-bottom: 20px;">
                 {!! $post->body !!}

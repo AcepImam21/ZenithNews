@@ -145,8 +145,14 @@
                     <div
                         class="bg-white p-4 rounded-lg shadow-md flex flex-col justify-between transition duration-300 transform hover:scale-105 hover:shadow-lg">
                         <div>
-                            <img src="https://source.unsplash.com/300x300/?{{ $post->category->name }}"
+                            @if($post->image)
+                                <img src="{{ asset('storage/' . $post->image) }}" alt="Gambar Berita"
+                                class="w-full h-40 object-cover mb-4" style=" margin-bottom: 20px;">
+                            @else
+                                <img src="https://source.unsplash.com/300x300/?{{ $post->category->name }}"
                                 alt="Gambar Berita" class="w-full h-40 object-cover mb-4">
+                            @endif
+                            
                             <h2 class="text-lg font-bold mb-1">{{ $post->title }}</h2>
                             <p style="margin-top: 2px; margin-bottom: 10px">Oleh
                                 <a href="/authors/{{ $post->author->username }}" class="hover:underline" style="">

@@ -14,7 +14,11 @@
             </a>
         </p>
 
-        <img src="https://source.unsplash.com/300x300/?{{ $post->category->name }}" alt="Gambar Berita" class="w-full h-40 object-cover mb-4" style="margin-top: 20px; margin-bottom: 20px;">
+        @if($post->image)
+            <img src="{{ asset('storage/' . $post->image) }}" alt="Gambar Berita" class="w-full mb-4" style="margin-top: 15px; margin-bottom: 15px;">
+        @else
+            <img src="https://source.unsplash.com/300x300/?{{ $post->category->name }}" alt="Gambar Berita" class="w-full mb-4" style="margin-top: 15px; margin-bottom: 15px;">
+        @endif
 
         <div style="margin-top: 20px; margin-bottom: 20px;">
             {!! $post->body !!}
