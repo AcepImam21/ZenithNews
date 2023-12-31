@@ -3,6 +3,13 @@
     <div class="h-full ml-14 mt-24 mb-10 md:ml-64">
         <h1 class="mx-4 mt-4 text-2xl">Postingan Saya</h1>
         <!-- Client Table -->
+
+        @if (session()->has('success'))
+            <div class="px-6 py-4 bg-green-50 rounded-lg text-green-500 w-1/3 mx-3 mt-2">
+                <span class="font-bold">{{ session('success') }}</span>
+            </div>
+        @endif
+
         <div class="mt-4 mx-4">
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
                 <div class="w-full overflow-x-auto">
@@ -31,8 +38,16 @@
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-white">
-                                        <a href="" class="bg-red-600 rounded-md px-3 py-2"><ion-icon
-                                                name="trash-outline"></ion-icon></a>
+                                        <form action="/dashboard/posts/{{ $post->slug }}" class="inline" method="post">
+                                            @method('delete')
+                                            @csrf
+
+                                            <button class="bg-red-600 rounded-md px-3 py-2 "
+                                                onclick="return confirm('Anda yakin ingin menghapus data ini?')"><ion-icon
+                                                    name="trash-outline"></ion-icon></button>
+                                        </form>
+
+
                                         <a href="/dashboard/posts/{{ $post->slug }}"
                                             class="bg-green-600 rounded-md px-3 py-2"><ion-icon
                                                 name="eye-outline"></ion-icon></a>

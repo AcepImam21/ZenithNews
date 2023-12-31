@@ -7,10 +7,14 @@
                 class="bg-gray-700 inline-block mt-10 mb-10  hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md transition duration-300 transform hover:shadow-md"><ion-icon
                     name="arrow-back-outline"></ion-icon>Kembali
                 Ke Post </a>
-            <a href="#"
-                class="bg-red-700 inline-block mt-10 mb-10  hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md transition duration-300 transform hover:shadow-md"><ion-icon
-                    name="trash-outline"></ion-icon>Hapus
-            </a>
+            <form action="/dashboard/posts/{{ $post->slug }}" class="inline" method="post">
+                @method('delete')
+                @csrf
+
+                <button class="bg-red-600 text-white rounded-md px-3 py-2 "
+                    onclick="return confirm('Anda yakin ingin menghapus data ini?')"><ion-icon
+                        name="trash-outline"></ion-icon>Hapus</button>
+            </form>
             <a href="#"
                 class="bg-blue-700 inline-block mt-10 mb-10  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition duration-300 transform hover:shadow-md"><ion-icon
                     name="create-outline"></ion-icon>Edit
