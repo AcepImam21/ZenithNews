@@ -3,13 +3,13 @@
     <div class="h-full ml-14 mt-20 md:ml-64">
         <h1 class="mx-4 mt-4 text-2xl">Tambah Postingan Saya</h1>
 
-        <div class="max-w-md bg-white p-8  rounded ">
+        <div class="max-w-4xl bg-white p-8 rounded">
 
             <form method="post" action="/dashboard/posts">
                 @csrf
                 <div class="mb-4">
                     <label for="title" class="block text-sm font-medium text-gray-600">Judul</label>
-                    <input type="text" id="title" name="title" class="mt-1 p-2 w-full border rounded @error('title') is-invalid @enderror" required autofocus value="{{ old('title') }}">
+                    <input type="text" id="title" name="title" class="mt-1 p-2 w-full border rounded  @error('title') is-invalid @enderror" required autofocus value="{{ old('title') }}">
                     @error('title')
                         <div class="text-red-500 mt-2 text-sm">
                             {{ $message }}

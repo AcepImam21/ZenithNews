@@ -51,7 +51,7 @@
                                         <a href="/dashboard/posts/{{ $post->slug }}"
                                             class="bg-green-600 rounded-md px-3 py-2"><ion-icon
                                                 name="eye-outline"></ion-icon></a>
-                                        <a href="" class="bg-blue-600 rounded-md px-3 py-2"><ion-icon
+                                        <a href="/dashboard/posts/{{ $post->slug }}/edit" class="bg-blue-600 rounded-md px-3 py-2"><ion-icon
                                                 name="create-outline"></ion-icon></a>
                                     </td>
 

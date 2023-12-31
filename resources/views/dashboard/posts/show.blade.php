@@ -15,7 +15,7 @@
                     onclick="return confirm('Anda yakin ingin menghapus data ini?')"><ion-icon
                         name="trash-outline"></ion-icon>Hapus</button>
             </form>
-            <a href="#"
+            <a href="/dashboard/posts/{{ $post->slug }}/edit"
                 class="bg-blue-700 inline-block mt-10 mb-10  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition duration-300 transform hover:shadow-md"><ion-icon
                     name="create-outline"></ion-icon>Edit
             </a>
