@@ -16,13 +16,14 @@
                         </div>
 
                         <form action="/login" method="post">
+                            @csrf
                             <div class="mt-10 grid space-y-4">
                                 <input
                                     class=" @error('email') is-invalid
                                 @enderror  group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                                     placeholder="Email" type="email" name="email" id="email" autofocus required>
                                 @error('email')
-                                    <div class="text-red-500">
+                                    <div class="bg-red-500 text-white rounded-md">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -30,7 +31,7 @@
                                     class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                                     placeholder="Password" type="password" name="password" id="password" required>
                                 @error('password')
-                                    <div class="text-red-500">
+                                    <div class="bg-red-500  text-white rounded-md">
                                         {{ $message }}
                                     </div>
                                 @enderror

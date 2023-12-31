@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StorePostRequest;
-use App\Http\Requests\UpdatePostRequest;
 use App\Models\Post;
+use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class DashboardPostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('home', [
-            "title" => "Postingan Terbaru",
-            // "posts" => Post::latest()->get()
-            "posts" => post::with(['author', 'category'])->latest()->filter(request(['search', 'category', 'author']))->get()
+
+        return view('dashboard.posts.index', [
+
+            'posts' => Post::where('user_id', auth()->user()->id)->get(),
         ]);
     }
 
@@ -25,13 +24,13 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.posts.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePostRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -41,9 +40,8 @@ class HomeController extends Controller
      */
     public function show(Post $post)
     {
-        return view('post', [
-            "title" => "Single Post",
-            "post" => $post,
+        return view('dashboard.posts.show', [
+            'post' => $post,
         ]);
     }
 
@@ -58,7 +56,7 @@ class HomeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePostRequest $request, Post $post)
+    public function update(Request $request, Post $post)
     {
         //
     }
@@ -68,6 +66,9 @@ class HomeController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+
+        Post::destroy($post->id);
+
+        return redirect('/dashboard/posts')->with('success', 'Postingan sudah dihapus!');
     }
 }

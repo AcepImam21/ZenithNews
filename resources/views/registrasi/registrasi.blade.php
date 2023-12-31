@@ -23,7 +23,7 @@
                                     placeholder="Nama Lengkap" type="text" name="name" id="name" required
                                     value="{{ old('name') }}">
                                 @error('name')
-                                    <div class="text-red-500">
+                                    <div class="bg-red-500  text-white rounded-md">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -35,7 +35,7 @@
                                     placeholder="Username" type="text" name="username" id="username" required
                                     value="{{ old('username') }}">
                                 @error('username')
-                                    <div class="text-red-500">
+                                    <div class="bg-red-500  text-white rounded-md">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -45,7 +45,7 @@
                                     placeholder="Email" type="email" id="email" name="email" required
                                     value="{{ old('email') }}">
                                 @error('email')
-                                    <div class="text-red-500">
+                                    <div class="bg-red-500  text-white rounded-md">
                                         {{ $message }}
                                     </div>
                                 @enderror
@@ -54,7 +54,7 @@
                                     class=" @error('password') is-invalid @enderror group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                                     placeholder="Password" type="password" name="password" id="password" required>
                                 @error('password')
-                                    <div class="text-red-500">
+                                    <div class="bg-red-500 text-white rounded-md">
                                         {{ $message }}
                                     </div>
                                 @enderror
