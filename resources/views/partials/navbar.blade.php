@@ -9,10 +9,12 @@
         <div class="flex items-center space-x-4">
 
             <form action="/" method="GET" class="flex items-center">
-                <input type="text" name="search" placeholder="Cari berita..." value="{{ request('search') }}" class="form-control bg-gray-200 px-8 py-2 rounded-md focus:outline-gray-200 mr-2">
-                <button type="submit" class="bg-blue-500 items-center text-white px-4 py-2 my-2 rounded-md"><ion-icon class="" name="search"></ion-icon></button>
+                <input type="text" name="search" placeholder="Cari berita..." value="{{ request('search') }}"
+                    class="form-control bg-gray-200 px-8 py-2 rounded-md focus:outline-gray-200 mr-2">
+                <button type="submit" class="bg-blue-500 items-center text-white px-4 py-2 my-2 rounded-md"><ion-icon
+                        class="" name="search"></ion-icon></button>
             </form>
-            
+
             @auth
                 <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"
                     class="flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full focus:outline-none hover:text-blue-600 "
@@ -52,7 +54,7 @@
 </nav>
 
 <!-- Bottom Navbar -->
-<nav class="bg-gray-800 p-4">
+<nav class="bg-gray-800 p-8">
     <div class="container m-auto flex justify-center items-center">
         <!-- Menu -->
         <div class="hidden md:flex space-x-8">
@@ -62,4 +64,3 @@
         </div>
     </div>
 </nav>
-
