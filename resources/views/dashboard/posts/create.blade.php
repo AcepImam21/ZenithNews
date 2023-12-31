@@ -41,8 +41,9 @@
                 </div>
 
                 <div class="mb-4">
-                    <label for="image" class="block text-sm font-medium text-gray-600">Pilih File</label>
-                    <input type="file" id="image" name="image" class="mt-1 p-2 w-full border rounded @error('image') is-invalid border-red-500 @enderror">
+                    <label for="image" class="block text-sm font-medium text-gray-600">Pilih Gambar</label>
+                    <img id="img-preview" class="img-preview" style="max-height: 200px;">
+                    <input type="file" id="image" name="image" class="mt-1 p-2 w-full border rounded @error('image') is-invalid border-red-500 @enderror" onchange="previewImage()">
                     @error('file')
                         <div class="text-red-500 mt-2 text-sm">
                             {{ $message }}
@@ -78,5 +79,19 @@
         document.addEventListener('trix-file-accept', function(e) {
             e.preventDefault();
         })
+
+        function previewImage() {
+            const image =  document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+            
+            imgPreview.style.display = 'block';
+            
+            const ofReader = new FileReader();
+            ofReader.readAsDataURL(image.files[0]);
+            
+            ofReader.onload = function(oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
     </script>
 @endsection
